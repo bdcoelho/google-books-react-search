@@ -14,7 +14,8 @@ function Search() {
       <Row>
         <Col size="md-12">
           <Jumbotron
-          title={"Find and Organize your reading"}
+          title={"Google Books Search"}
+          content={"Find and Organize your reading"}
           />
           <form className="m-auto">
             <Input
@@ -36,7 +37,7 @@ function Search() {
             <Card>
               <Card.Body>
                 <Card.Title className="d-flex justify-content-center">
-                  No results found - Please enter a different search value
+                  No results
                 </Card.Title>
               </Card.Body>
             </Card>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import API from "../src/utils/API";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Search from "./components/Search";
-import Saved from "./components/Saved";
-import NoMatch from "./components/NoMatch";
+import Search from "./components/PageSearch";
+import Saved from "./components/PageSaved";
+import Invalid from "./components/Invalid";
 import Nav from "./components/Header";
 import AppContext from "../src/utils/AppContext";
 
@@ -109,7 +109,7 @@ function App() {
               <Saved />
             </Route>
             <Route>
-              <NoMatch />
+              <Invalid />
             </Route>
           </Switch>
         </div>

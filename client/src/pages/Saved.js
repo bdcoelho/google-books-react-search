@@ -17,7 +17,7 @@ function SavedBooks() {
           </Jumbotron>
         </Col>
         <Col size="12">
-        {context.developerState.savedBooks.length > 0 ? 
+        {context.bookState.savedBooks.length > 0 ? 
           ( <SavedBookCard /> )
           :
           <Card>

@@ -30,7 +30,7 @@ function Search() {
           </form>
         </Col>
         <Col size="12">
-          {context.developerState.books.length > 0 ? 
+          {context.bookState.books.length > 0 ? 
             ( <BookCard /> )
             : 
             <Card>

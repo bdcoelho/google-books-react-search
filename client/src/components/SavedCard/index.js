@@ -9,7 +9,7 @@ function CardComponent() {
   return (
     <Card style={{ borderRadius: "10px", backgroundColor: "#e9ecef" }}>
       <Card.Body>
-        {context.developerState.savedBooks.map(book => {
+        {context.bookState.savedBooks.map(book => {
           return (  
             <li style={{ borderRadius: "10px", marginBottom: "5px" }} className="list-group-item" key={book._id}>
               <Row className="SearchResult row" id={book.id}>

@@ -9,7 +9,7 @@ import DataAreaContext from "../src/utils/DataAreaContext";
 
 function App() {
   // Setting our component's initial state
-  const [developerState, setDeveloperState] = useState({
+  const [bookState, setbookState] = useState({
     searchValue: "",
     books: [],
     savedBooks: []
@@ -24,8 +24,8 @@ function App() {
   function loadBooks() {
     API.getBooks()
       .then(res => 
-        setDeveloperState({ 
-          ...developerState,
+        setbookState({ 
+          ...bookState,
           savedBooks: res.data
         })
       )
@@ -44,8 +44,8 @@ function App() {
     API.search(query)
       .then(res => {
         console.log(res.data.items);
-        setDeveloperState({ 
-          ...developerState,
+        setbookState({ 
+          ...bookState,
           books: res.data.items
         })
       })
@@ -55,8 +55,8 @@ function App() {
   function handleInputChange(event) {
     event.preventDefault();
     // setSearchValue(event.target.value);
-    setDeveloperState({ 
-      ...developerState,
+    setbookState({ 
+      ...bookState,
       searchValue: event.target.value
     })
   };
@@ -64,13 +64,13 @@ function App() {
   // When the form is submitted, search the Google Books API for `this.state.search`
   function handleFormSubmit(event) {
     event.preventDefault();
-    searchBooks(developerState.searchValue);
+    searchBooks(bookState.searchValue);
   };
 
   function handleSavedButton(event) {
     event.preventDefault();
-    console.log(developerState.books)
-    developerState.books.forEach(book => {
+    console.log(bookState.books)
+    bookState.books.forEach(book => {
       if (book.id === event.target.id) {
         console.log(book);
         API.saveBook({
@@ -82,8 +82,8 @@ function App() {
           image: book.volumeInfo.imageLinks.smallThumbnail,
           link: book.volumeInfo.previewLink
         })
-          .then(res => setDeveloperState({ 
-            ...developerState,
+          .then(res => setbookState({ 
+            ...bookState,
             savedBooks: res.data 
           }))
           .then( alert("Your book is saved") )
@@ -92,11 +92,11 @@ function App() {
     });
   }
 
-  console.log(developerState.savedBooks);
+  console.log(bookState.savedBooks);
 
   return (
     <DataAreaContext.Provider
-    value={{ developerState, handleInputChange, handleFormSubmit, handleSavedButton, deleteBook }}
+    value={{ bookState, handleInputChange, handleFormSubmit, handleSavedButton, deleteBook }}
     >
       <Router>
         <div>

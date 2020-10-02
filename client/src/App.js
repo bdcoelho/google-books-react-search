@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
-import DataAreaContext from "../src/utils/DataAreaContext";
+import Nav from "./components/Header";
+import AppContext from "../src/utils/AppContext";
 
 function App() {
   // Setting our component's initial state
@@ -95,7 +95,7 @@ function App() {
   console.log(bookState.savedBooks);
 
   return (
-    <DataAreaContext.Provider
+    <AppContext.Provider
     value={{ bookState, handleInputChange, handleFormSubmit, handleSavedButton, deleteBook }}
     >
       <Router>
@@ -114,7 +114,7 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </DataAreaContext.Provider>
+    </AppContext.Provider>
   );
 }
 

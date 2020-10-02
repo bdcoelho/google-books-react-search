@@ -4,18 +4,18 @@ import { Col, Row, Container } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
 import { Card } from 'react-bootstrap';
 import BookCard from "../components/SearchCard"
-import DataAreaContext from "../utils/DataAreaContext";
+import AppContext from "../utils/AppContext";
 
 function Search() {
-  const context = useContext(DataAreaContext);
+  const context = useContext(AppContext);
 
   return (
     <Container fluid>
       <Row>
         <Col size="md-12">
-          <Jumbotron>
-            <h1>Search for and Save books of interest</h1>
-          </Jumbotron>
+          <Jumbotron
+          title={"Find and Organize your reading"}
+          />
           <form className="m-auto">
             <Input
               onChange={(e) => {context.handleInputChange(e)}}

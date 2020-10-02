@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Col, Row } from "../Grid";
 import { Card, Button } from 'react-bootstrap';
-import DataAreaContext from "../../utils/DataAreaContext";
+import AppContext from "../../utils/AppContext";
 
 function CardComponent() {
-  const context = useContext(DataAreaContext);
+  const context = useContext(AppContext);
 
   return (
     <Card style={{ borderRadius: "10px", backgroundColor: "#e9ecef" }}>
@@ -34,7 +34,7 @@ function CardComponent() {
                 <Button className="saveBook btn btn-primary" id={book.id} onClick={() => context.deleteBook(book._id)}>
                   Delete Book
                 </Button>
-                <a href={book.link} target="_blank">
+                <a href={book.link} target="_blank" rel="noopener noreferrer">
                   <Button className="viewBook btn btn-success">
                     View Book
                   </Button>

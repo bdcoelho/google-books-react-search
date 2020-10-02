@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Jumbotron from "./Jumbotron";
-import { Col, Row, Container } from "./Grid";
+import { Col, Row, Container } from "react-bootstrap";
 import { Card } from 'react-bootstrap';
 import SavedBookCard from "./SavedCard"
 import AppContext from "../utils/AppContext";
@@ -11,12 +11,12 @@ function SavedBooks() {
   return (
     <Container fluid>
       <Row>
-        <Col size="md-12">
+        <Col lg={12}>
           <Jumbotron
           title={"Saved Titles"}
 />
         </Col>
-        <Col size="12">
+        <Col lg={12}>
         {context.bookState.savedBooks.length > 0 ? 
           ( <SavedBookCard /> )
           :

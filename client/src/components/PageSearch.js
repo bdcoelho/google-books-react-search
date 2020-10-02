@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Jumbotron from "./Jumbotron";
-import { Col, Row, Container } from "./Grid";
+import { Col, Row, Container } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import BookCard from "./SearchCard";
 import AppContext from "../utils/AppContext";
@@ -11,7 +11,7 @@ function Search() {
   return (
     <Container fluid>
       <Row>
-        <Col size="md-12">
+        <Col lg={12}>
           <Jumbotron
             title={"Google Books Search"}
             content={"Find and Organize your reading"}
@@ -39,7 +39,7 @@ function Search() {
             </button>
           </form>
         </Col>
-        <Col size="12">
+        <Col lg={12}>
           {context.bookState.books.length > 0 ? (
             <BookCard />
           ) : (

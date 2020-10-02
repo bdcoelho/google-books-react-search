@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Col, Row } from "./Grid";
+import { Col, Row } from "react-bootstrap";
 import { Card, Button } from 'react-bootstrap';
 import AppContext from "../utils/AppContext";
 
@@ -13,11 +13,11 @@ function CardComponent() {
           return (  
             <li style={{ borderRadius: "10px", marginBottom: "5px" }} className="list-group-item" key={book._id}>
               <Row className="SearchResult row" id={book.id}>
-                <Col size="2" className="bookImage">
+                <Col lg={2} className="bookImage">
                     <img src={book.image} alt={book.title} />
                 </Col>
-                <Col size="1" className="emptyCol"/>
-                <Col size="9" className="bookInfo">
+                <Col lg={1} className="emptyCol"/>
+                <Col lg={9} className="bookInfo">
                     <Row>
                         <h3 className="bookTitle">{book.title}</h3>
                     </Row>

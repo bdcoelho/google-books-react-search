@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import Jumbotron from "../components/Jumbotron";
-import { Col, Row, Container } from "../components/Grid";
-import { Input, FormBtn } from "../components/Form";
+import Jumbotron from "./Jumbotron";
+import { Col, Row, Container } from "./Grid";
+import { Input, FormBtn } from "./Form";
 import { Card } from 'react-bootstrap';
-import BookCard from "../components/SearchCard"
+import BookCard from "./SearchCard"
 import AppContext from "../utils/AppContext";
 
 function Search() {

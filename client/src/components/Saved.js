@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import Jumbotron from "../components/Jumbotron";
-import { Col, Row, Container } from "../components/Grid";
+import Jumbotron from "./Jumbotron";
+import { Col, Row, Container } from "./Grid";
 import { Card } from 'react-bootstrap';
-import SavedBookCard from "../components/SavedCard"
+import SavedBookCard from "./SavedCard"
 import AppContext from "../utils/AppContext";
 
 function SavedBooks() {

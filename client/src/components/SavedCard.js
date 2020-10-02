@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { Col, Row } from "../Grid";
+import { Col, Row } from "./Grid";
 import { Card, Button } from 'react-bootstrap';
-import AppContext from "../../utils/AppContext";
+import AppContext from "../utils/AppContext";
 
 function CardComponent() {
   const context = useContext(AppContext);

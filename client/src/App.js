@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import API from "../src/utils/API";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Search from "./pages/Search";
-import Saved from "./pages/Saved";
-import NoMatch from "./pages/NoMatch";
+import Search from "./components/Search";
+import Saved from "./components/Saved";
+import NoMatch from "./components/NoMatch";
 import Nav from "./components/Header";
 import AppContext from "../src/utils/AppContext";
 

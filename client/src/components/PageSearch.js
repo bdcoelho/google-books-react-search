@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import Jumbotron from "./Jumbotron";
 import { Col, Row, Container } from "./Grid";
-import { Input, FormBtn } from "./Form";
-import { Card } from 'react-bootstrap';
-import BookCard from "./SearchCard"
+import { Card } from "react-bootstrap";
+import BookCard from "./SearchCard";
 import AppContext from "../utils/AppContext";
 
 function Search() {
@@ -14,26 +13,36 @@ function Search() {
       <Row>
         <Col size="md-12">
           <Jumbotron
-          title={"Google Books Search"}
-          content={"Find and Organize your reading"}
+            title={"Google Books Search"}
+            content={"Find and Organize your reading"}
           />
           <form className="m-auto">
-            <Input
-              onChange={(e) => {context.handleInputChange(e)}}
-              name="title"
-              placeholder="Book name"
-            />
-            <FormBtn
-              onClick={(e) => {context.handleFormSubmit(e)}}
+            <div className="form-group">
+              <input
+                className="form-control"
+                name="title"
+                placeholder="Search for a book"
+                onChange={(e) => {
+                  context.handleInputChange(e);
+                }}
+              />
+            </div>
+
+            <button
+              onClick={(e) => {
+                context.handleFormSubmit(e);
+              }}
+              style={{ float: "right", marginBottom: 10 }}
+              className="btn btn-success"
             >
               Search Book
-            </FormBtn>
+            </button>
           </form>
         </Col>
         <Col size="12">
-          {context.bookState.books.length > 0 ? 
-            ( <BookCard /> )
-            : 
+          {context.bookState.books.length > 0 ? (
+            <BookCard />
+          ) : (
             <Card>
               <Card.Body>
                 <Card.Title className="d-flex justify-content-center">
@@ -41,12 +50,11 @@ function Search() {
                 </Card.Title>
               </Card.Body>
             </Card>
-          }
+          )}
         </Col>
       </Row>
     </Container>
   );
 }
-
 
 export default Search;

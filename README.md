@@ -50,7 +50,7 @@
 
   ![License Badge](https://img.shields.io/badge/license-MIT-blue)
 
-  You may utilize this application under the terms of the [MIT license](public/license/MIT.txt).
+  You may utilize this application under the terms of the [MIT license](./client/public/license/MIT.txt).
 
   ## Contributions
 

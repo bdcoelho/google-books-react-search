@@ -41,10 +41,8 @@ function App() {
   }
 
   function searchBooks(query) {
-    console.log(query)
     API.search(query)
       .then(res => {
-        console.log(res.data.items);
         setbookState({ 
           ...bookState,
           books: res.data.items
@@ -70,10 +68,8 @@ function App() {
 
   function handleSavedButton(event) {
     event.preventDefault();
-    console.log(bookState.books)
     bookState.books.forEach(book => {
       if (book.id === event.target.id) {
-        console.log(book);
         API.saveBook({
           key: book.id,
           id: book.id,
@@ -93,7 +89,6 @@ function App() {
     });
   }
 
-  console.log(bookState.savedBooks);
 
   return (
     <AppContext.Provider

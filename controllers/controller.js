@@ -2,7 +2,6 @@ const db = require("../models");
 
 module.exports = {
   create: function (req, res) {
-    console.log(req.body);
     db.Book.create(req.body)
       .then((response) => res.json(response))
       .catch((err) => res.status(422).json(err));

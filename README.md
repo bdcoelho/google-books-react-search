@@ -7,7 +7,7 @@
   ![Open Issues](https://img.shields.io/github/issues-raw/bdcoelho/google-books-react-search) 
   ![Repo Size](https://img.shields.io/github/repo-size/bdcoelho/google-books-react-search)
 
-  # Welcome to Budget Tracker
+  # Welcome to Google Books Search
 
 
   ## Table of Contents

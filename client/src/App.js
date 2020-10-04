@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from "./components/PageSearch";
 import Saved from "./components/PageSaved";
 import Invalid from "./components/Invalid";
+import Footer from "./components/Footer";
 import Nav from "./components/Header";
 import AppContext from "../src/utils/AppContext";
 
@@ -102,7 +103,7 @@ function App() {
         <div>
           <Nav />
           <Switch>
-            <Route exact path={["/", "/search"]}>
+            <Route exact path={["/"]}>
               <Search />
             </Route>
             <Route exact path={["/saved"]}>
@@ -112,6 +113,7 @@ function App() {
               <Invalid />
             </Route>
           </Switch>
+          <Footer />      
         </div>
       </Router>
     </AppContext.Provider>

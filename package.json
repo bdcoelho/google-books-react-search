@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/bdcoelho/google-books-react-search.git"
   },
-  "author": "Darren Behan",
+  "author": "Benson Coelho",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.20.0",

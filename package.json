@@ -1,5 +1,5 @@
 {
-  "name": "googole-books-react-search",
+  "name": "google-books-react-search",
   "version": "1.0.0",
   "description": "An app to search for and save favourites from google books",
   "main": "server.js",
